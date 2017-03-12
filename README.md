@@ -1,5 +1,5 @@
 # BlueBird
-This is the old BlueBird script written in 2012-2013 for Ultimate AIR Gamers and has never gotten out of its beta stage. The login system was tied a IPB 3 forum and the web script for this is not included.
+This is the old BlueBird script written in 2012-2013 for Ultimate AIR Gamers and has never gotten out of its beta stage. The login system was tied to a IPB 3 forum and the web script for this is not included.
 This code is very likely to bug out in certain causes and is open sourced for educational purposes.  
   
 The Segoe UI font used by BB_GUI is **NOT** included.
