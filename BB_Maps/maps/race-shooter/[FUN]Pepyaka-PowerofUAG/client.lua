@@ -1,5 +1,0 @@
-outputChatBox ("#ffffff[FUN] #ffff00Pepyaka #ffffff- Power of #0083A8UAG", 27, 89, 224, true)
-outputChatBox ("#ffff00Pepyaka#ffffff: Don't forget to visit: http://ultimateairgamers.com", 27, 89, 224, true)
-outputChatBox("#ffff00Pepyaka#ffffff: You know, how to shoot and jump :3", 27, 89, 224,true)
-outputChatBox("#ffff00Pepyaka#ffffff: Toggle the music on/off with 'k'", 27, 89, 224,true)
-outputChatBox("#ffff00Pepyaka#ffffff: Have fun!", 27, 89, 224,true)
