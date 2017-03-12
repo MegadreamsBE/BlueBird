@@ -1,7 +1,7 @@
 function SendMSG(message, type)
 	if(isPlayerMuted(source)) then
 		cancelEvent()
-		outputChatBox("[GLOBAL]: #FF0000Tou are muted and cannot talk.", 27,161,226, true)
+		outputChatBox("[GLOBAL]: #FF0000You are muted and cannot talk.", 27,161,226, true)
 		return
 	end
 	if((getElementData(source,"bb.room") or -1) == -1) then
@@ -31,7 +31,7 @@ addEventHandler("onPlayerChat", getRootElement(), SendMSG)
 
 function SendGlobalMSG(player, command, ...)
 	if(isPlayerMuted(player)) then
-		outputChatBox("[GLOBAL]: #FF0000Tou are muted and cannot talk.", 27,161,226, true)
+		outputChatBox("[GLOBAL]: #FF0000You are muted and cannot talk.", 27,161,226, true)
 		return
 	end
 	local arg = {...}
