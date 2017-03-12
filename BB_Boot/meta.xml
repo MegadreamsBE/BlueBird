@@ -1,0 +1,8 @@
+<meta>
+	<!-- Data -->
+	<info author="Jockie" type="misc" name="Bluebird rebooter"/>
+
+	<!-- Codes -->
+	<script src="s_reboot.lua" type="server" />
+	<export function="restartBlueBird" type="server"/>
+</meta>

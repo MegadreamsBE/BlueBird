@@ -1,0 +1,34 @@
+<meta>
+	<info author="Megadreams" description="RACE-Deathmatch Mode" version="1" type="script" />
+	<min_mta_version client="1.3.0-9.04570" server="1.3.0-9.04570"  />
+	
+	<script src="c_connect.lua" type="client"/>
+	<script src="s_connect.lua"/>
+	<script src="s_race.lua"/>
+	
+	<file src="audio/count_1.mp3" cache="false" />
+	<file src="audio/count_2.mp3" cache="false" />
+	<file src="audio/count_3.mp3" cache="false" />
+	<file src="audio/count_go.mp3" cache="false" />
+	<file src="images/count_1.png" cache="false" />
+	<file src="images/count_2.png" cache="false" />
+	<file src="images/count_3.png" cache="false" />
+	<file src="images/count_go.png" cache="false" />
+	<file src="images/last_survivor.png" cache="false" />
+	<file src="images/timeleft.png" cache="false" />
+	<file src="models/repair.txd" cache="false" />
+	<file src="models/repair.dff" cache="false" />
+	<file src="models/nitro.txd" cache="false" />
+	<file src="models/nitro.dff" cache="false" />
+	<file src="models/vehiclechange.txd" cache="false" />
+	<file src="models/vehiclechange.dff" cache="false" />
+	
+	<export function="loadGamemode" type="client"/>
+	<export function="unloadGamemode" type="client"/>
+	<export function="onClientMapStop" type="client"/>
+	<export function="setRoomID" type="server"/>
+	<export function="onPlayerTableUpdate" type="server"/>
+	<export function="onPlayerLeaveRoom" type="server"/>
+	<export function="sendMapElement" type="client"/>
+	<export function="onMapLoaded" type="client"/>
+</meta>

@@ -1,0 +1,5 @@
+<meta>
+	<info author="drcra" type="script" version="1" />
+	<script src="detectorServer.lua" type="server"/> 
+	<script src="detectorClient.lua" type="client"/> 
+</meta>

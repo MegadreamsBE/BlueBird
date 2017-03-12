@@ -1,0 +1,9 @@
+1. Add support for radar blips
+2. Test with racegamemode. Maybe handle onElementDestroy and players' death too. 
+
+Done:
+- Exported functions
+- Support for Bluebird color schemes
+- Show spectated player's health 
+- Add players colors support
+- Fix for radar Y position scale

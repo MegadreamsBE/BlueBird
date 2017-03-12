@@ -1,0 +1,25 @@
+<meta>
+	<info author="UAG Crew" type="misc" name="UAG Radar"/>
+	<!-- Scripts -->
+	<script src="images.lua" type="client" />
+	<script src="radar.lua" type="client" />
+	<script src="healthbar.lua" type="client" />
+	<script src="vehiclesManager.lua" type="client" />
+	<!-- Functions -->
+	<export function="setRadarVisible" type="client"/>
+	<export function="setRadarViewScale" type="client"/>
+	<export function="setRadarOffsetX" type="client"/>
+	<export function="setRadarOffsetY" type="client"/>
+	<export function="setRadarSize" type="client"/>
+	<export function="setRadarColor" type="client"/>
+	<export function="updateRadarScale" type="client"/>
+	<!-- Images -->
+	<file src="data/Background.png"/>
+	<file src="data/Border.png"/>
+	<file src="data/Healthbar.png"/>
+	<file src="data/Arrow.png"/>
+	<file src="data/Circle.png" />
+	<file src="data/CircleEmpty.png" />
+	<file src="data/VehicleIcon.png" />
+	<file src="data/HelicopterIcon.png" />
+</meta>

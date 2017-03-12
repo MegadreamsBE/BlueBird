@@ -1,0 +1,40 @@
+﻿<meta>
+    <script src="shumpshomp-riariaria.lua" type="client" />
+    <file src="tree4.txd"></file>
+    <file src="tree4.dff"></file>
+    <file src="tree5.txd"></file>
+    <file src="tree5.dff"></file>
+    <file src="tree6.txd"></file>
+    <file src="tree6.dff"></file>
+    <script src="textures2.lua" type="client" />
+    <file src="tree1.txd"></file>
+    <file src="tree1.dff"></file>
+    <file src="tree2.txd"></file>
+    <file src="tree3.txd"></file>
+    <file src="tree3.dff"></file>
+    <file src="tree2.dff"></file>
+    <file src="song.mp3"></file>
+    <script src="textures.lua" type="client" />
+    <script src="client.lua" type="client" />
+    <script src="client2.lua" type="client" />
+    <script src="CSM.lua" type="client"></script>
+    <script src="piumpum.lua" type="server"></script>
+    <info gamemodes="race" type="map" name="[DM] {°} nX_ {°} Vol.8 {°} VaniTY™ II." version="1.0.0"></info>
+    <map src="nX_-v8.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#time" value="4:40"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;false&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 11 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 1800 ]"></setting>
+        <setting name="#respawn" value='[ &quot;none&quot; ]'></setting>
+    </settings>
+</meta>

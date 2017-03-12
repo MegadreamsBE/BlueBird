@@ -1,0 +1,18 @@
+<meta>
+	<!-- Data -->
+	<info author="SHC Crew" type="misc" name="SHC Login"/>
+	<min_mta_version client="1.3.0-9.03782" />
+	
+	<!-- Codes -->
+	<script src="c_login.lua" type="client" />
+	<script src="s_login.lua" type="server" />
+	<script src="s_load.lua" type="server" />
+	<script src="s_save.lua" type="client" />
+	<script src="c_load.lua" type="client" />
+	<script src="c_splashes.lua" type="client" />
+
+	<!-- Exports -->
+	<export function="main" type="client"/>
+	<export function="isInGroup" type="server"/>
+	<export function="SQL" type="server"/>
+</meta>

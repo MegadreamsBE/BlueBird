@@ -1,0 +1,25 @@
+<meta>
+    <script src="palm.lua" type="client"></script>
+    <file src="gta_tree_palm2.txd"></file>
+    <file src="veg_palm02.dff"></file>
+	<file src="music.mp3"></file>
+    <script src="music.lua" type="client"></script>
+    <info gamemodes="race" type="map" name="[DM] Cosa_Nostra - In Further Blackness" author="Cosa_Nostra" version="1.0.0"></info>
+    <map src="Cosa-In_Further_Blackness.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#time" value="0:0"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 1 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 1800 ]"></setting>
+        <setting name="#respawn" value='[ &quot;none&quot; ]'></setting>
+    </settings>
+</meta>

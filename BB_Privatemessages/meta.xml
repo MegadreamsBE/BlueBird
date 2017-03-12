@@ -1,0 +1,6 @@
+<meta>
+    <info author="Micra" name="PrivateMessage" type="script" version="1.0.0" />
+    <script src="pm_s.lua" type="server" />
+	<script src="pm_c.lua" type="client" />
+	<config src="help.xml" type="client" />
+</meta>

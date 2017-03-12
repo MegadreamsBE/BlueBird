@@ -1,0 +1,22 @@
+<meta>
+	<info author="Megadreams" description="BlueBird Rooms" version="1" type="script" />
+	
+	<script src="c_main.lua" type="client"/>
+	<script src="s_main.lua"/>
+	
+	<export function="requestRooms" type="client"/>
+	<export function="joinRoom" type="client"/>
+	<export function="loadRoomMap" type="client"/>
+	<export function="getClientPlayersInRoom" type="client"/>
+	
+	<export function="getPlayersInRoom" type="server"/>
+	<export function="getDefaultRooms" type="server"/>
+	<export function="setRoomPrevMap" type="server"/>
+	<export function="setRoomMap" type="server"/>
+	<export function="getRoomInformation" type="server"/>
+	<export function="onRoomStop" type="server"/>
+	
+	<export function="getRoomIDAssociatedWithGamemode" type="server"/>
+	<export function="setRoomLocked" type="server"/>
+	<export function="removePlayersFromRoom" type="server"/>
+</meta>

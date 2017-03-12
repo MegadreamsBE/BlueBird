@@ -1,0 +1,22 @@
+<meta>
+	<info author="Megadreams" description="BlueBird Mapmanager" version="1" type="script" />
+	<min_mta_version client="1.3.0-9.04570" server="1.3.0-9.04570"  />
+	
+	<script src="c_maps.lua" type="client"/>
+	<script src="s_maps.lua"/>
+	
+	<file src="images/loading.png" cache="false" />
+	<file src="images/loadingborder.png" cache="false" />
+	<file src="images/bar-lside.png" cache="false" />
+	<file src="images/bar-mside.png" cache="false" />
+	<file src="images/bar-rside.png" cache="false" />
+	
+	<export function="closeLoader" type="client"/>
+	
+	<export function="getRandomMap" type="server"/>
+	<export function="loadRandomMap" type="server"/>
+	<export function="unloadMap" type="server"/>
+	<export function="loadMapForPlayer" type="server"/>
+	<export function="unloadMapForPlayer" type="server"/>
+	<export function="getMapByPartOfName" type="server"/>
+</meta>

@@ -1,0 +1,31 @@
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("", 255, 255, 255, true)
+outputChatBox ("##FF0000W#FFFFFFelcome. #FF0000T#FFFFFFhis is my #FF0000Vol#FFFFFF3.", 255, 255, 255, true )
+outputChatBox ("#FF0000H#FFFFFFave #FF0000F#FFFFFFun #FF0000!", 255, 255, 255, true)
+
+
+txd = engineLoadTXD ( "gta_tree_palm.txd" )
+engineImportTXD ( txd, 622 )
+dff = engineLoadDFF ( "veg_palm03.dff", 622 )
+dff = engineLoadDFF ( "veg_palm02.dff", 622 )
+engineReplaceModel ( dff, 622 )
+
+
+addEventHandler( "onClientResourceStart", getResourceRootElement(getThisResource()), ClientStarted )
+

@@ -1,0 +1,27 @@
+<meta>
+    <script src="music.lua" type="client" />
+    <script src="carc.lua" type="client" />
+    <file src="ballypillar01.txd" />
+    <file src="vgehshade.txd" />
+    <file src="vgncarshade1.txd" />
+    <file src="music2.mp3" />
+    <script src="client.lua" type="client" />
+    <info gamemodes="race" type="map" name="[DM] Rafinha V8 - Black and Yellow II" author="Rafinha" version="1.0.4" />
+    <map src="[DM]RafinhaV8.map" dimension="0" />
+    <settings>
+        <setting name="#skins" value='[ &quot;random&quot; ]' />
+        <setting name="#maxplayers" value="[ 32 ]" />
+        <setting name="#gamespeed" value="[ 1 ]" />
+        <setting name="#ghostmode" value='[ &quot;true&quot; ]' />
+        <setting name="#time" value="19:0" />
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]' />
+        <setting name="#minplayers" value="[ 0 ]" />
+        <setting name="#weather" value="[ 0 ]" />
+        <setting name="#gravity" value="[ 0.008000 ]" />
+        <setting name="#waveheight" value="[ 0 ]" />
+        <setting name="#respawntime" value="[ 5 ]" />
+        <setting name="#locked_time" value="[ true ]" />
+        <setting name="#duration" value="[ 600 ]" />
+        <setting name="#respawn" value='[ none ]' />
+    </settings>
+</meta>

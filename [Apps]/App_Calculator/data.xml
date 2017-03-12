@@ -1,0 +1,7 @@
+<data>
+	<alias>Calculator</alias>
+	<icon>images/icon.png</icon>
+	
+	<file>images/icon.png</file>
+	<file>c_calculator.lua</file>
+</data>

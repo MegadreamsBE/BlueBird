@@ -1,0 +1,7 @@
+<meta>
+	<info author="UAG Crew" type="misc" name="BlueBird GUI"/>
+	<min_mta_version client="1.3.0-9.04431" />
+	
+	<script src="c_chat.lua" type="client"/>
+	<script src="s_chat.lua" type="server"/>
+</meta>

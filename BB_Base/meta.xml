@@ -1,0 +1,5 @@
+<meta>
+	<info author="MegaDreams" description="base" version="1" type="gamemode" />
+
+	<script src="script.lua"/>
+</meta>

@@ -1,0 +1,10 @@
+<meta>
+	<!-- Data -->
+	<info author="UAG Crew" type="misc" name="UAG Statistics"/>
+	<min_mta_version client="1.3.0-9.03782" />
+	
+	<!-- Codes -->
+	<script src="s_stats.lua" type="server" />
+	
+	<export function="onPlayerDieStatistics" type="server"/>
+</meta>

@@ -1,0 +1,55 @@
+This file contains the list of gamemodes + explanation in alphabetic abbriviation order.
+
+- Base Defense
+This gamemode is basicly a ripped off game from those minigames on the web, where you have to
+defend your own base with turrets(here, peds) from enemies.
+     Tower defense?
+
+- Capture The Flag
+The goal well-known CTF gamemode is to obtain the enemies flag and bring it to your own base.
+
+- Capture The Vehicle
+Just like CTF, but then with a vehicle.
+
+- Deathmatch
+Simple fighting with weapons.
+
+- Freeroam
+A own world where the players are able to drive, fly, and stunt around the city.
+
+- Music Studio
+Here you can create your own music, by using your own music and snip it into parts, or with presets.
+Pitch it, speed it, edit it like you want, you can share it with friends afterwards.
+
+- Need For Speed (Vehicle only)
+This gamemode is 'new' in MTA, this gamemode is a combination of the Vehicle Races with Freeroam.
+It's not possible to walk as ped, just drive, do some races and beat others.
+
+- Search and Destroy
+This gamemode is well-known in CSS, as terrorists you have to plant some bombs
+at the enemy (the good ones) before they kill you.
+
+- Shooter (Vehicle Only)
+Eliminate others before they eleminate you, use rockets
+and be the last vehicle ridin'.
+
+- Real Life
+When playing Real Life, it's about to life the way like real, get to work, buy food, get a house(and perhaps design it),
+make friends or enemies, be a police cop or a robber.
+
+- Team Deathmatch
+Basicly the same as Deathmatch, but then with teams.
+
+- Trials (Vehicle Only)
+The currently-upcoming gamemode with third person from the side, when driving with a vehicle while not being able to steer.
+Just give gas or flip, and reach the checkpoints. 
+
+- Turf War
+The goal is to obtain enemies capturable points, but be quickly before the enemy starts capturing your points.
+
+- Derby Destruction (Vehicle Only)
+Smash into other vehicles and ruin theirs till they burn and explode, survive and beat others.
+
+- Deathmatch (Vehicle Only)
+Make your way to the best vehicle of the map and kill others before they kill you.
+

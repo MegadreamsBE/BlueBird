@@ -1,0 +1,31 @@
+<meta>
+    <file src="music2.mp3" />
+    <file src="ballypillar01.txd" />
+    <file src="gta_tree_palm.txd" />
+    <file src="veg_palm03.dff" />
+    <file src="vgncarshade1.txd" />
+    <file src="vgs_palm01.dff" />
+    <script src="music.lua" type="client" />
+    <script src="carc.lua" type="client" />
+    <script src="client.lua" type="client" />
+    <script src="client2.lua" type="client" />
+    <script src="client3.lua" type="client" />
+    <info gamemodes="race" type="map" name="[DM]Rafinha V11 - Black and Yellow III" author="Rafinha" version="1.0.0"></info>
+    <map src="[DM]RafinhaV11.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 32 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#time" value="0:0"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 17 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 0 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 600 ]"></setting>
+        <setting name="#respawn" value='[ &quot;none&quot; ]'></setting>
+    </settings>
+</meta>

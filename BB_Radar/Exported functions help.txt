@@ -1,0 +1,106 @@
+==============================================================================
+================================== BB_Radar ==================================
+==============================================================================
+
+Kinda mini-documentation :3
+
+===================================================================================================================
+===================================================================================================================
+NOTICE: After calling setRadarOffsetX, setRadarOffsetY or setRadarSize, use updateRadarScale() to perform changes!
+===================================================================================================================
+===================================================================================================================
+
+exports.BB_Radar : function ( arguments )
+exports["BB_Radar"] : function ( arguments )
+
+
+
+======================
+== updateRadarScale ==
+======================
+
+* Description:
+Updates radar scale (see NOTICE)
+
+* Usage:
+updateRadarScale()
+
+
+
+=====================
+== setRadarVisible ==
+=====================
+
+* Description: 
+-
+
+* Usage:
+setRadarVisible(boolean visible)
+
+
+
+=======================
+== setRadarViewScale ==
+=======================
+
+* Description: 
+Changes the scale of the radar view
+
+* Usage:
+setRadarViewScale(float scale)
+setRadarViewScale() -- set the scale to default (0.8)
+
+
+
+=====================
+== setRadarOffsetX ==
+=====================
+
+* Description: 
+Sets the X position of the radar (from the left border of the screen)
+
+* Usage:
+setRadarOffsetX(int position)
+setRadarOffsetX() -- set the position to default (40 px)
+
+
+
+=====================
+== setRadarOffsetY ==
+=====================
+
+* Description: 
+Sets the Y position of the radar (from the bottom border of the screen)
+
+* Usage:
+setRadarOffsetY(int position)
+setRadarOffsetY() -- set the position to default (80 px)
+
+
+
+==================
+== setRadarSize ==
+==================
+
+* Description: 
+-
+
+* Usage:
+setRadarSize(int size)
+setRadarSize() -- set to default (280)
+
+===================
+== setRadarColor ==
+===================
+
+* Description:
+-
+
+* Usage:
+setRadarColor(int color) -- Use tocolor(red, green, blue, alpha)
+
+setRadarColor(int red, int green, int blue) -- Alpha will be 255
+
+setRadarColor(int red, int green, int blue, int alpha)
+
+setRadarColor() -- Restore default color tocolor(27, 161, 226, 255)

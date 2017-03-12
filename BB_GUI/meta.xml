@@ -1,0 +1,97 @@
+<meta>
+	<!-- Data -->
+	<info author="UAG Crew" type="misc" name="BlueBird GUI"/>
+	<min_mta_version client="1.3.0-9.04431" />
+	
+	<!-- Codes -->
+
+	<script src="c_animation.lua" type="client"/>
+	<script src="c_error.lua" type="client"/>
+	<script src="c_extra.lua" type="client"/>
+	<script src="c_mouse.lua" type="client"/>
+	<script src="c_property.lua" type="client"/>
+	<script src="c_render.lua" type="client"/>
+	<script src="c_scroll.lua" type="client"/>
+	<script src="c_theme.lua" type="client"/>
+	<script src="c_util.lua" type="client"/>
+	
+	<script src="elements/dxButton.lua" type="client"/>
+	<script src="elements/dxCheckBox.lua" type="client"/>
+	<script src="elements/dxContainer.lua" type="client"/>
+	<script src="elements/dxEdit.lua" type="client"/>
+	<script src="elements/dxFocusPoint.lua" type="client"/>
+	<script src="elements/dxImage.lua" type="client"/>
+	<script src="elements/dxLoadingIcon.lua" type="client"/>
+	<script src="elements/dxLoadingBar.lua" type="client"/>
+	<script src="elements/dxRadioButton.lua" type="client"/>
+	<script src="elements/dxRectangle.lua" type="client"/>
+	<script src="elements/dxScrollPane.lua" type="client"/>
+	<script src="elements/dxSlider.lua" type="client"/>
+	<script src="elements/dxText.lua" type="client"/>
+	<script src="elements/dxTile.lua" type="client"/>
+
+	<!-- Images -->
+
+	<file src="images/circle.png" type="client" />
+	<file src="images/loading1.png" type="client" />
+	<file src="images/loading2.png" type="client" />
+	<file src="images/blanc.png" type="client" /> 
+
+	<!-- Fonts -->
+
+	<file src="fonts/segoeuil.ttf"/>
+	<file src="fonts/segoeui.ttf"/>
+	<file src="fonts/seguisb.ttf"/>
+	
+	<!-- Shader -->
+	
+	<file src="shader/window.fx" type="client" />
+	
+	<!-- Exports -->
+	<export function="startRender" type="client" />
+	<export function="stopRender" type="client" />
+	
+	<export function="dxCreateTile" type="client"/>
+	<export function="dxCreateScrollPane" type="client"/>
+	<export function="dxCreateRectangle" type="client"/>
+	<export function="dxCreateFocusPoint" type="client"/>
+	<export function="dxCreateEdit" type="client"/>
+	<export function="dxCreateCheckBox" type="client"/>
+	<export function="dxCreateImage" type="client"/>
+	<export function="dxCreateSlider" type="client"/>
+	<export function="dxCreateText" type="client"/>
+	<export function="dxCreateRadioButton" type="client"/>
+	<export function="dxCreateLoadingIcon" type="client" />
+	<export function="dxCreateLoadingBar" type="client" />
+	<export function="dxCreateButton" type="client" />
+
+	<export function="dxDestroyElement" type="client"/>
+	<export function="dxDestroyChildren" type="client"/>
+	<export function="dxSetSize" type="client"/>
+	<export function="dxSetPaneSize" type="client"/>
+	<export function="dxSetPosition" type="client"/>
+	<export function="dxSetParent" type="client"/>
+	<export function="dxScrollPaneFocusTo" type="client"/>
+	<export function="dxScrollPaneGetCurrentOffsets" type="client"/>
+
+	<export function="dxBringToFront" type="client"/>
+	<export function="dxMoveToBack" type="client"/>
+
+	<export function="dxSetProperty" type="client"/>
+	<export function="dxGetProperty" type="client"/>
+
+	<export function="dxCreateAnimation" type="client" />
+	<export function="dxTweenPosition" type="client" />
+
+	<export function="dxGetFont" type="client"/>
+	<export function="dxGetColor" type="client"/>
+	<export function="dxSetColor" type="client"/>
+
+	<export function="isUsingDXEdit" type="client"/>
+
+	<export function="dxGetRawData" type="client"/>
+	<export function="dxSetRawData" type="client"/>
+
+	<export function="kickError" type="client"/>
+	<export function="pushError" type="client"/>
+</meta>

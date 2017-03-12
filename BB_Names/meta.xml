@@ -1,0 +1,5 @@
+<meta>
+	<info author="Megadreams" description="BlueBird Names" version="1" type="script" />
+	
+	<script src="c_names.lua" type="client"/>
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+	<info author="Megadreams" description="Scoreboard" version="1" type="script" />
+	
+	<script src="c_scoreboard.lua" type="client"/>
+	<script src="s_scoreboard.lua" type="server"/>
+</meta>

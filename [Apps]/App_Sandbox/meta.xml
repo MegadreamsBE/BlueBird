@@ -1,0 +1,17 @@
+<meta>
+	<!-- Data -->
+	<info author="Sandbox Application" type="misc" name="App_Sandbox"/>
+	<min_mta_version server="1.3.1-9.04836" client="1.3.1-9.04836" />
+	
+	<!-- Connector -->
+	<script src="s_connect.lua" type="server" />
+	<script src="c_connect.lua" type="client" />
+
+	<!-- Exports -->
+	<export function="loadApplication" type="client"/>
+	<export function="openApplication" type="client"/>
+	<export function="closeApplication" type="client"/>
+	<export function="liveTileUpdate" type="client"/>
+	<export function="isStillUpdating" type="client"/>
+	<export function="giveMeDetails" type="client"/>
+</meta>

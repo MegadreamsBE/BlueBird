@@ -1,0 +1,32 @@
+<meta>
+    <info gamemodes="race" type="map" name="[DM] Pee[J] ft. XMattix - Flaxi Trip II" author="Pee[J] &amp; XMattix" version="1.0.0" description="LABBERSACK"></info>
+    <map src="[DM]PeeJftXMattix-FTII.map" dimension="0"></map>
+    <settings>
+        <setting name="#skins" value='[ &quot;cj&quot; ]'></setting>
+        <setting name="#maxplayers" value="[ 128 ]"></setting>
+        <setting name="#gamespeed" value="[ 1 ]"></setting>
+        <setting name="#ghostmode" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#time" value="5:30"></setting>
+        <setting name="#vehicleweapons" value='[ &quot;true&quot; ]'></setting>
+        <setting name="#minplayers" value="[ 0 ]"></setting>
+        <setting name="#weather" value="[ 1 ]"></setting>
+        <setting name="#gravity" value="[ 0.008000 ]"></setting>
+        <setting name="#waveheight" value="[ 0 ]"></setting>
+        <setting name="#respawntime" value="[ 5 ]"></setting>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#duration" value="[ 1800 ]"></setting>
+        <setting name="#respawn" value='[ &quot;none&quot; ]'></setting>
+    </settings>
+    <file src="song.mp3"></file>
+    <script src="music.lua" type="client"></script>
+    <script src="client.lua" type="client"></script>
+    <script src="CSM.lua" type="client"></script>
+	
+	
+    <script src="client.lua" type="client"></script>
+    <script src="client1.lua" type="client"></script>
+	<file src="gta_tree_palm.txd"/>
+	<file src="621.txd"/>
+	<file src="veg_palm03.dff"/>
+	<file src="621.dff"/>
+</meta>

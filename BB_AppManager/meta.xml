@@ -1,0 +1,16 @@
+<meta>
+	<!-- Data -->
+	<info author="SHC Crew" type="misc" name="SHC App Manager"/>
+
+	<!-- Codes -->
+	<script src="c_run.lua" type="client" />
+	<script src="s_apps.lua" type="server" />
+
+	<!-- Exports -->
+	<export function="LoadApp" type="client"/>
+	<export function="CloseApp" type="client"/>
+	<export function="IsRunningApp" type="client"/>
+	<export function="getPlayerExtraApps" type="server"/>
+	<export function="setPlayerQuickAcces" type="server"/>
+	<export function="getPlayerQuickAcces" type="server"/>
+</meta>

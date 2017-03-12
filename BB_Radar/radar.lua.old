@@ -1,0 +1,228 @@
+--
+-- This is the main file of the radar script
+--
+-- Contains common logic and drawing code
+--
+
+-- Namespaces
+healthbar = {}
+fpscounter = {}
+vehiclesManager = {}
+
+rootElement = getRootElement()
+localPlayer = getLocalPlayer()
+
+isTestModeEnabled = false -- For debugging /ssize [width] [height] - imitate another screen resolution
+
+screenInfo = {}
+screenInfo.width, screenInfo.height = guiGetScreenSize()
+
+radarInfo = {}
+-- View scale
+radarInfo.viewScale = 3.5
+
+-- Absolute values
+radarInfo.a_x = 0
+radarInfo.a_y = 0
+radarInfo.a_size = 280
+
+-- Scaled values
+radarInfo.scale = 1
+radarInfo.x = 0
+radarInfo.y = 0
+radarInfo.center_x = 0
+radarInfo.center_y = 0
+radarInfo.center_offset = 0
+radarInfo.size = 0
+radarInfo.border_x = 0
+radarInfo.border_y = 0
+radarInfo.border_size = 0
+
+-- Colors
+radarInfo.backgroundColor = tocolor(0, 0, 0, 100)
+radarInfo.borderColor = tocolor(255, 255, 255, 255)
+radarInfo.healthbarColor = tocolor(27, 161, 226, 255)
+radarInfo.hunterColor = tocolor(255, 0, 0, 255)
+lineColor = tocolor(255, 255, 255, 50) -- Test mode line
+lineColorTransparent = tocolor(0, 255, 0, 100) -- Bullshit
+
+localPlayerVehicle = nil
+
+viewRenderTarget = dxCreateRenderTarget(radarInfo.a_size, radarInfo.a_size, true)
+
+hunterRed = false
+-- Helicopter icon animation
+local helicopterIconRotation = 0
+--------------------
+---- Functions -----
+--------------------
+
+function getCameraRotationZ()
+	local camx, camy, camz, camlx, camly, camlz = getCameraMatrix()
+	local t = -math.deg(math.atan2(camlx - camx,camly - camy))
+	if t < 0 then t = t + 360 end;
+	return t;
+end
+
+function updateRadarScale()
+	-- Scale
+	radarInfo.scale = screenInfo.height / 1080
+
+	-- Scaled values
+	radarInfo.x = math.floor(radarInfo.a_x * radarInfo.scale)
+	radarInfo.y = math.floor(radarInfo.a_y * radarInfo.scale)
+
+	radarInfo.size = math.floor(radarInfo.a_size * radarInfo.scale)
+
+	radarInfo.center_x = radarInfo.x + radarInfo.size / 2
+	radarInfo.center_y = radarInfo.y + radarInfo.size / 2
+	radarInfo.center_offset = radarInfo.size / 2
+
+	radarInfo.border_x = radarInfo.x + 2 * radarInfo.scale
+	radarInfo.border_y = radarInfo.y + 2 * radarInfo.scale
+	radarInfo.border_size = radarInfo.size - 4 * radarInfo.scale
+end
+
+function drawVehicleIcon(x, y, r, isHelicopter, isHunter)
+	if isHelicopter then
+		if isHunter and hunterRed then
+			dxDrawImage(x, y, images.icons.HelicopterIcon.width, images.icons.HelicopterIcon.height, images.icons.HelicopterIcon.path, r + helicopterIconRotation, 0, 0, radarInfo.hunterColor)
+		else
+			dxDrawImage(x, y, images.icons.HelicopterIcon.width, images.icons.HelicopterIcon.height, images.icons.HelicopterIcon.path, r + helicopterIconRotation, 0, 0, radarInfo.healthbarColor)
+		end
+	else
+		dxDrawImage(x, y, images.icons.VehicleIcon.width, images.icons.VehicleIcon.height, images.icons.VehicleIcon.path, r, 0, 0, radarInfo.healthbarColor)
+	end
+end
+
+function drawCircleIcon(x, y, r, isHunter, distance)
+	local color = radarInfo.healthbarColor
+	if isHunter and hunterRed then
+		color = radarInfo.hunterColor
+	end
+	if distance > 2.5 then
+		dxDrawImage(x, y, images.icons.Circle.width, images.icons.Circle.height, images.icons.Circle.path, r, 0, 0, color)
+	elseif distance < -2.5 then
+		dxDrawImage(x, y, images.icons.Circle.width, images.icons.Circle.height, images.icons.Circle.path, r + 180, 0, 0, color)
+	else
+		dxDrawImage(x, y, images.icons.Circle.width, images.icons.Circle.height, images.icons.CircleEmpty.path, r + 180, 0, 0, color)
+	end
+end
+
+function drawRadar()
+	local camRotZ = getCameraRotationZ()
+	-- Background
+	dxDrawImage(radarInfo.x, radarInfo.y, radarInfo.size, radarInfo.size, images.Background.path, 0, 0, 0, radarInfo.backgroundColor)
+	-- Icons
+	dxSetRenderTarget(viewRenderTarget, true)
+	-- Drawing own vehicle
+	local my_x, my_y, my_z = getElementPosition(localPlayerVehicle)
+	local my_rx, my_ry, my_rz = getElementRotation(localPlayerVehicle)
+	dxDrawImage(radarInfo.a_size / 2 - images.icons.Arrow.width / 2, radarInfo.a_size / 2  - images.icons.Arrow.height / 2, images.icons.Arrow.width, images.icons.Arrow.height, images.icons.Arrow.path, -my_rz, 0, 0, radarInfo.healthbarColor)
+	-- Drawing other vehicles
+	for i, v in ipairs(vehiclesManager.list) do
+		local x, y, z = getElementPosition(v)
+		local new_x = (x - my_x) * radarInfo.viewScale
+		local new_y = (my_y - y) * radarInfo.viewScale
+		local isHelicopter = getVehicleID(v) == 425
+		local isHunter = getVehicleID(v) == 425
+		local distance = getDistanceBetweenPoints2D(0, 0, new_x, new_y)
+		if distance < (radarInfo.a_size / 2 - 4 * radarInfo.scale - images.icons.VehicleIcon.height / 2) then
+			local rx, ry, rz = getElementRotation(v)
+			if isHelicopter then
+				drawVehicleIcon(radarInfo.a_size / 2 + new_x  - images.icons.HelicopterIcon.width / 2, radarInfo.a_size / 2 + new_y - images.icons.HelicopterIcon.height / 2, -rz, true, isHunter)
+			else
+				drawVehicleIcon(radarInfo.a_size / 2 + new_x  - images.icons.VehicleIcon.width / 2, radarInfo.a_size / 2 + new_y - images.icons.VehicleIcon.height / 2, -rz, false, false)
+			end
+		else
+			drawCircleIcon(radarInfo.a_size / 2 + new_x / distance * (radarInfo.a_size / 2 - 2 - images.icons.Circle.height) - images.icons.Circle.width / 2, radarInfo.a_size / 2 + new_y / distance * (radarInfo.a_size / 2 - 2 - images.icons.Circle.height) - images.icons.Circle.height / 2, -camRotZ, isHunter, z - my_z)
+		end
+	end
+	dxSetRenderTarget()
+	dxDrawImage(radarInfo.x, radarInfo.y, radarInfo.size, radarInfo.size, viewRenderTarget, camRotZ)
+	-- Healthbar
+	healthbar.draw()
+
+	-- Border
+	dxDrawImage(radarInfo.x, radarInfo.y, radarInfo.size, radarInfo.size, images.Border.path, 0, 0, 0, radarInfo.borderColor)
+end
+
+-----------------------------
+---- Events and commands ----
+-----------------------------
+
+local function clientRenderHandler()
+	-- Test mode code
+	--[[if isTestModeEnabled then
+		--dxDrawText("X: " .. radarInfo.x .. " Y: " ..radarInfo.y .. " Screen Size: " .. screenInfo.width .. "x" .. screenInfo.height .. " Scale: " .. radarInfo.scale, radarInfo.x + 10, radarInfo.y - 20)
+		--dxDrawText("Vehicles count: " .. #vehiclesManager.list, radarInfo.x + 10, radarInfo.y - 45)
+		dxDrawLine(radarInfo.x, 0, radarInfo.x, screenInfo.height, lineColor, 1)
+		dxDrawLine(radarInfo.x + radarInfo.size, 0, radarInfo.x + radarInfo.size, screenInfo.height, lineColor, 1)
+
+		dxDrawLine(0, radarInfo.y, screenInfo.width, radarInfo.y, lineColor, 1)
+		dxDrawLine(0, radarInfo.y + radarInfo.size, screenInfo.width, radarInfo.y + radarInfo.size, lineColor, 1)
+
+		dxDrawLine(0, 0, screenInfo.width, 0, lineColor, 2)
+		dxDrawLine(screenInfo.width, 0, screenInfo.width, screenInfo.height, lineColor, 2)
+		dxDrawLine(0, screenInfo.height, screenInfo.width, screenInfo.height, lineColor, 2)
+		dxDrawLine(0, screenInfo.height, 0, 0, lineColor, 2)
+
+		fpscounter.draw() -- FPS Counter
+	end]]--
+	-- Drawing the radar itself
+	if localPlayerVehicle then
+		drawRadar()
+	end
+end
+
+local function clientResourceStartHandler()
+	-- Absolute radar position
+	radarInfo.a_x = 40
+	radarInfo.a_y = screenInfo.height - radarInfo.a_size - 80
+	-- Updating scaled values
+	updateRadarScale()
+
+	showPlayerHudComponent("radar", false) -- Hide classic radar
+
+	-- Updating the vehicles list
+	vehiclesManager.updateList()
+
+	localPlayerVehicle = getPedOccupiedVehicle(localPlayer)
+
+	addEventHandler("onClientRender", rootElement, clientRenderHandler)
+end
+
+local function clientResourceStopHandler()
+	showPlayerHudComponent("radar", true) -- Restore classic radar
+end
+
+local function updateHelicopterIcons()
+	helicopterIconRotation = helicopterIconRotation + 45
+end
+
+local function updateHunterRed()
+	hunterRed = not hunterRed
+end
+
+addEventHandler("onClientResourceStart", getResourceRootElement(getThisResource()), clientResourceStartHandler)
+addEventHandler("onClientResourceStop", getResourceRootElement(getThisResource()), clientResourceStopHandler)
+setTimer(updateHelicopterIcons, 100, 0)
+setTimer(updateHunterRed, 400, 0)
+-- Test ssize command
+-- Use it to imitate another screen resolution
+-- Usage: /ssize [width] [height] or 
+-- /ssize def  - to restore
+
+if isTestModeEnabled then
+	addCommandHandler("ssize", 
+	function(cmd, sw, sh)
+		if sw == "def" then
+			screenInfo.width, screenInfo.height = guiGetScreenSize()
+			updateRadarScale()
+			return
+		end
+		screenInfo.width = sw
+		screenInfo.height = sh
+		updateRadarScale()
+	end)
+end

@@ -1,0 +1,17 @@
+<meta>
+	<!-- Data -->
+	<info author="SHC Crew" type="misc" name="SHC Notifier"/>
+
+	<!-- Codes -->
+	<script src="c_client.lua" type="client" />
+
+	<!-- Images -->
+	<file src="images/error.png" type="client" />
+	<file src="images/warning.png" type="client" />
+	<file src="images/wait.png" type="client" />
+	<file src="images/check.png" type="client" />
+	
+	<!-- Exports -->
+	<export function="Notify" type="client"/>
+
+</meta>

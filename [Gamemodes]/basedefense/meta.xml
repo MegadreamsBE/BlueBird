@@ -1,0 +1,18 @@
+<meta>
+	<info author="Jockie" description="Base Defense" version="1" type="script" />
+	<min_mta_version client="1.3.0-9.04570" server="1.3.0-9.04570"  />
+	
+	<script src="c_connect.lua" type="client"/>
+	<script src="s_connect.lua"/>
+	<script src="s_basedef.lua"/>
+
+	<export function="getModeName" type="client"/>
+	<export function="loadGamemode" type="client"/>
+	<export function="unloadGamemode" type="client"/>
+	<export function="onClientMapStop" type="client"/>
+	<export function="setRoomID" type="server"/>
+	<export function="onPlayerTableUpdate" type="server"/>
+	<export function="onPlayerLeaveRoom" type="server"/>
+	<export function="sendMapElement" type="client"/>
+	<export function="onMapLoaded" type="client"/>
+</meta>

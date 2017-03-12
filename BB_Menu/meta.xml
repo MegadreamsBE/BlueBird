@@ -1,0 +1,37 @@
+<meta>
+	<!-- Data -->
+	<info author="SHC Crew" type="misc" name="SHC Menu"/>
+	<min_mta_version client="1.3.0-9.03782" />
+
+	<!-- Codes -->
+	<script src="c_init.lua" type="client" />
+	<script src="c_menu.lua" type="client" />
+	<script src="c_parts.lua" type="client" />
+	
+	<script src="s_check.lua" type="server" />
+
+	<!-- Images -->
+	<file src="images/border.png" type="client" />
+	<file src="images/bluebird.png" type="client" />
+
+	<file src="images/icons/blanc.png" type="client" />
+	<file src="images/icons/defaultuser.png" type="client" />
+
+	<!-- Fonts -->
+
+	
+	<!-- Shader -->
+
+	
+	<!-- Exports -->
+	<export function="FadeOutMenu" type="client"/>
+	<export function="FadeInMenu" type="client"/>
+	<export function="ToggleMenu" type="client"/>
+	<export function="createAppWindow" type="client"/>
+	<export function="setMenuEnabled" type="client"/>
+	<export function="initializeQuickAcces" type="client"/>
+	<export function="initializeAppsList" type="client"/>
+	<export function="initializeRoomsList" type="client"/>
+	<export function="giveMeDetails" type="client"/>
+	<export function="ShowMenuForFirstTime" type="client"/>
+</meta>
